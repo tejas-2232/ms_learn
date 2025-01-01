@@ -113,3 +113,36 @@ az acr build --registry $REGISTRYNAME --image expressimage .
 ```bash
 cd ..
 ```
+## Note: Above Steps might not work if you are using Azure Free Trail
+
+### Alternate way to Push image to ACR?
+
+1. login to ACR using docker login command in bash terminal
+2. if image is not build already then build the image and then tag it.
+3. push the tagged image to ACR.
+
+The commands are as follows:
+
+```bash
+1. docker tag <the_name_you_want_to_show_in_ACR> <youracrname>.azurecr.io/<the_image_name_which_you_built>
+2. docker push <youracrname>.azurecr.io/<the_name_you_want_to_show_in_ACR> 
+```
+
+Actual command I used:
+
+```bash
+1. docker build -t marvelregistry.azurecr.io/expimgv1 .
+```
+
+![image](https://github.com/user-attachments/assets/923161eb-9d21-483e-bbeb-0c18428fbb39)
+
+```bash
+2. docker push marvelregistry.azurecr.io/expimgv1
+```
+
+![image](https://github.com/user-attachments/assets/10efd096-e0cd-41ff-b7d3-fe2e6dcf64af)
+
+
+
+
+![image](https://github.com/user-attachments/assets/aacf7109-0220-48e1-bf83-2ef6f9c0c3d5)
