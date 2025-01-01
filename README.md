@@ -133,7 +133,7 @@ Actual command I used:
 ```bash
 1. docker build -t marvelregistry.azurecr.io/expimgv1 .
 ```
-![image](https://github.com/user-attachments/assets/aacf7109-0220-48e1-bf83-2ef6f9c0c3d5)
+![image](https://github.com/user-attachments/assets/ce7864de-979b-4385-8b55-f366693a23b8)
 
 ```bash
 2. docker push marvelregistry.azurecr.io/expimgv1
