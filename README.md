@@ -133,8 +133,7 @@ Actual command I used:
 ```bash
 1. docker build -t marvelregistry.azurecr.io/expimgv1 .
 ```
-
-![image](https://github.com/user-attachments/assets/923161eb-9d21-483e-bbeb-0c18428fbb39)
+![image](https://github.com/user-attachments/assets/aacf7109-0220-48e1-bf83-2ef6f9c0c3d5)
 
 ```bash
 2. docker push marvelregistry.azurecr.io/expimgv1
@@ -142,7 +141,3 @@ Actual command I used:
 
 ![image](https://github.com/user-attachments/assets/10efd096-e0cd-41ff-b7d3-fe2e6dcf64af)
 
-
-
-
-![image](https://github.com/user-attachments/assets/aacf7109-0220-48e1-bf83-2ef6f9c0c3d5)
