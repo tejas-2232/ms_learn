@@ -55,3 +55,61 @@ AKS handles Kubernetes for you by deploying, managing, and scaling Kubernetes cl
 ## Creating the smart fridge solution
 
 In our scenario, we'll use AKS to host containers in the cloud. The smart fridges will send REST messages to the cloud, where AKS will receive them and route them to a container. The container will run a Node.js program that routes messages to a management web app.
+
+## Exercise - Create AKS Cluster
+
+**What is covered in the exercise?**
+
+* Create a new registry in Azure Container Registry using the Azure portal.
+* Build an express.js Docker image and upload it to your container registry.
+* Create a Kubernetes cluster using AKS and connect it to your container registry.
+* Build a Next.js Docker image and upload it to your container registry.
+
+
+## Create a registry in Azure Container Registry
+
+1. Sign in to the Azure portal with your Azure subscription.
+2. Select Create a resource > Containers > Container Registry.
+
+![image](https://github.com/user-attachments/assets/fc552ca5-d7f3-4239-a1be-8452695a6418)
+
+3. Specify the values in the following table for each of the properties:
+![image](https://github.com/user-attachments/assets/d2d70173-7bb5-4ef8-bd15-ae34fa2ac07d)
+
+4. Select Review + create > Create.
+The container registry takes a few minutes to create.
+
+## Build a Docker image and upload it to Azure Container Registry
+
+1. Navigate to Azure Cloud Shell. If you're prompted to choose a shell, select Bash.
+2. Create environment variables for your registry name and resource group using the following commands. Make sure you replace {registry_name} with your unique registry name.
+
+```bash
+# Set the registry name
+REGISTRYNAME={registry_name}
+
+# Set the resource group name
+RESOURCEGROUP=learn-cna-rg
+```
+3. Download the source code for the Node.js app from GitHub using the git clone command.
+
+```bash
+git clone https://github.com/MicrosoftDocs/mslearn-cloud-native-apps-express.git
+```
+4. Change directories to the source code folder using `cd`.
+
+```bash
+cd mslearn-cloud-native-apps-express/src
+```
+
+5. Build and store the Docker image in your container registry using the az acr build command. Make sure to include the . at the end of the command.
+
+```bash
+az acr build --registry $REGISTRYNAME --image expressimage .
+```
+
+6. Return to the main directory of the source code using cd ...
+
+```bash
+cd ..
+```
