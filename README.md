@@ -134,13 +134,13 @@ docker login marvelregistry.azurecr.io
 ![image](https://github.com/user-attachments/assets/fdaa654c-afec-48fe-97a9-1f0a34fc71f0)
 
 
-
+**Tag Docker image:**
 ```bash
 1. docker tag <the_name_you_want_to_show_in_ACR> <youracrname>.azurecr.io/<the_image_name_which_you_built>
 2. docker push <youracrname>.azurecr.io/<the_name_you_want_to_show_in_ACR> 
 ```
 
-Actual command I used:
+**Actual command I used:**
 
 ```bash
 1. docker build -t marvelregistry.azurecr.io/expimgv1 .
@@ -150,6 +150,9 @@ Actual command I used:
 ```bash
 2. docker push marvelregistry.azurecr.io/expimgv1
 ```
-
 ![image](https://github.com/user-attachments/assets/10efd096-e0cd-41ff-b7d3-fe2e6dcf64af)
+
+* The Docker file contains the step-by-step instructions for building a Docker image from the source code for the Node.js application. 
+* Azure Container Registry runs these steps to build the image, and as each step completes, a message is generated.
+* The build process should finish after a couple of minutes.
 
