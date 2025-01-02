@@ -156,3 +156,7 @@ docker login marvelregistry.azurecr.io
 * Azure Container Registry runs these steps to build the image, and as each step completes, a message is generated.
 * The build process should finish after a couple of minutes.
 
+_Troubleshooting Ref:_
+
+1. [acr_issue](https://learn.microsoft.com/en-us/answers/questions/1530524/how-to-fix-(tasksoperationsnotallowed)-acr-tasks-r)
+2. [How to fix (TasksOperationsNotAllowed](https://stackoverflow.com/questions/77982084/how-to-fix-tasksoperationsnotallowed-acr-tasks-requests-for-the-registry-cont)
