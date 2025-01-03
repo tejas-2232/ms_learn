@@ -160,3 +160,25 @@ _Troubleshooting Ref:_
 
 1. [acr_issue](https://learn.microsoft.com/en-us/answers/questions/1530524/how-to-fix-(tasksoperationsnotallowed)-acr-tasks-r)
 2. [How to fix (TasksOperationsNotAllowed](https://stackoverflow.com/questions/77982084/how-to-fix-tasksoperationsnotallowed-acr-tasks-requests-for-the-registry-cont)
+
+
+## Create AKS Cluster
+
+1. On the Azure portal Home page, select Create a resource.
+
+2. Select Containers > Azure Kubernetes Service (AKS).
+
+![image](https://github.com/user-attachments/assets/06ce32db-9cc9-4049-bb27-3512439c9818)
+
+3. On the Basics tab, enter the following information:
+
+![image](https://github.com/user-attachments/assets/72c6b241-a4d7-4cb8-bca4-a140cad925fe)
+
+4. Select Next > Next > Next.
+
+5. On the Integrations tab, select the container registry you created earlier.
+
+6. Select Review + create > Create.
+
+The cluster takes a few minutes to create.
+
