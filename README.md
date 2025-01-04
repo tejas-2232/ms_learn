@@ -179,6 +179,24 @@ _Troubleshooting Ref:_
 5. On the Integrations tab, select the container registry you created earlier.
 
 6. Select Review + create > Create.
+    -> The cluster takes a few minutes to create.
+   
+7. Return to the Azure Cloud Shell, and create an environment variable for your cluster using the following command. Make sure you replace `{cluster-name}` with your Kubernetes cluster name
 
-The cluster takes a few minutes to create.
+```bash
+CLUSTERNAME={cluster-name}
+```
 
+### Build the management app Docker image
+
+1. In Azure Cloud Shell, change directories into the source code folder for the management app using cd
+
+```bash
+cd react/
+```
+
+2. Build and store the Docker image in your container registry using the az acr build command. Make sure to include the . at the end of the command.
+
+```bash
+az acr build --registry $REGISTRYNAME --image webimage .
+```
