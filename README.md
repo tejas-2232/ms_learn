@@ -200,3 +200,10 @@ cd react/
 ```bash
 az acr build --registry $REGISTRYNAME --image webimage .
 ```
+3. Return to the main directory of the source code using cd ...
+
+```bash
+cd ..
+```
+
+Congratulations! You just created a container registry, built express.js and Next.js container images, and stored the images in the registry. You also created a Kubernetes cluster in AKS that's connected to your container registry.
