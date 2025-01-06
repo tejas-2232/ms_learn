@@ -207,3 +207,21 @@ cd ..
 ```
 
 Congratulations! You just created a container registry, built express.js and Next.js container images, and stored the images in the registry. You also created a Kubernetes cluster in AKS that's connected to your container registry.
+
+
+## Developing with containers and AKS
+
+In previous exercise (above) we created an Azure Container Registry and a Kubernetes cluster in AKS. To deploy a container image to the cluster, we can connect to the cluster from the Cloud Shell.
+
+AKS can use either the Kubernetes command-line tool, kubectl, or the Azure CLI to manage deployments.
+
+### Open-source benefits
+
+* With kubectl and AKS, you can leverage open-source tools like Argo CD, which is a continuous-delivery tool for Kubernetes that creates infrastructure visualizations.
+* Argo CD helps increase your confidence in your systems, as you can show a deployment rollout or scaling operation happening in real-time.
+* If an error occurs, Argo CD helps troubleshoot by showing when and where the problem has occurred.
+
+### Deploying to a cluster
+
+* We can use kubectl to deploy a container from our container registry to the Kubernetes cluster.
+* Although Azure Container Registry is a private registry for container images, we already integrated our registry to AKS when we created the cluster. To deploy an image, we need to create a manifest file that contains instructions for the deployment.
