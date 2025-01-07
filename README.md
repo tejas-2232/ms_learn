@@ -225,3 +225,14 @@ AKS can use either the Kubernetes command-line tool, kubectl, or the Azure CLI t
 
 * We can use kubectl to deploy a container from our container registry to the Kubernetes cluster.
 * Although Azure Container Registry is a private registry for container images, we already integrated our registry to AKS when we created the cluster. To deploy an image, we need to create a manifest file that contains instructions for the deployment.
+
+
+### Creating a deployment manifest
+
+* Manifest files contain all the information needed to deploy your container image.
+* A Kubernetes manifest file allows you to describe your deployment in a YAML format, which simplifies Kubernetes management.
+
+![image](https://github.com/user-attachments/assets/6fa99d1a-d209-4f0f-962c-97863796b856)
+
+Storing an image in Kubernetes
+When we send a container image to a cluster, it's hosted in a pod. Containers are grouped into pods, and those pods scale to your desired state. Pods run an instance of your container and are the smallest deployable units of computing that you can create and manage in Kubernetes.
