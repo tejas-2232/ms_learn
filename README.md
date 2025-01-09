@@ -234,5 +234,20 @@ AKS can use either the Kubernetes command-line tool, kubectl, or the Azure CLI t
 
 ![image](https://github.com/user-attachments/assets/6fa99d1a-d209-4f0f-962c-97863796b856)
 
-Storing an image in Kubernetes
-When we send a container image to a cluster, it's hosted in a pod. Containers are grouped into pods, and those pods scale to your desired state. Pods run an instance of your container and are the smallest deployable units of computing that you can create and manage in Kubernetes.
+### Storing an image in Kubernetes
+
+* When we send a container image to a cluster, it's hosted in a pod.
+* Containers are grouped into pods, and those pods scale to your desired state.
+* Pods run an instance of your container and are the smallest deployable units of computing that you can create and manage in Kubernetes.
+
+![image](https://github.com/user-attachments/assets/ae4cb3a3-135c-4b55-a330-74f5942728a5)
+
+
+These pods have no intelligence. Each one has an IP address, network rules, and exposed ports, which are all managed for you by the Kubernetes API server.
+
+### Kubernetes health checks
+
+* One of the key benefits of Kubernetes is its self-healing ability, which restores applications to the exact instance that you tested and saved.
+* When you replicate or save containers, __Kubernetes can check on the health of the containers and replace them with an original copy if necessary.__
+* This is especially important at scale, when you might need multiple instances of containers spread across multiple regions.
+* 
