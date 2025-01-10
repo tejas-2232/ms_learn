@@ -242,7 +242,6 @@ AKS can use either the Kubernetes command-line tool, kubectl, or the Azure CLI t
 
 ![image](https://github.com/user-attachments/assets/ae4cb3a3-135c-4b55-a330-74f5942728a5)
 
-
 These pods have no intelligence. Each one has an IP address, network rules, and exposed ports, which are all managed for you by the Kubernetes API server.
 
 ### Kubernetes health checks
@@ -250,4 +249,13 @@ These pods have no intelligence. Each one has an IP address, network rules, and 
 * One of the key benefits of Kubernetes is its self-healing ability, which restores applications to the exact instance that you tested and saved.
 * When you replicate or save containers, __Kubernetes can check on the health of the containers and replace them with an original copy if necessary.__
 * This is especially important at scale, when you might need multiple instances of containers spread across multiple regions.
-* 
+
+### Example scenario: What our container will do
+
+* The Kubernetes API server will route REST messages from smart fridges to our Node container.
+* The smart fridges will send REST messages to the cloud, where AKS will receive them.
+* AKS will route the messages to an instance of our Node.js container.
+* The container will run a program that processes messages, and then route them to the management web
+
+![image](https://github.com/user-attachments/assets/08e6c6cf-acb9-453b-9948-9165fcfbeb5b)
+
